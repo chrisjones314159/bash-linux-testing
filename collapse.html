@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .collapsible {
+          background-color: #777;
+          color: white;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+        }
+        
+        .active, .collapsible:hover {
+          background-color: #555;
+        }
+        
+        #content {
+          background-color:aquamarine;
+          height: 10px;
+        }
+        </style>
+</head>
+<body>
+
+    <div id="content">
+        <p>
+            hello
+        </p>
+    </div>
+    <button type="button" onclick="func()">test</button>
+
+    <script>
+
+        function func() {
+            length = 10;
+            max_length = 500;
+            min_length = 10;
+
+            if (length < max_length) {
+                while (length < max_length) {
+                    length++;
+                    // console.log(length);
+                    document.getElementById("content").style.height = length+"px";
+                    
+                }
+            } else {
+                while (length > min_length) {
+                    length--;
+                    console.log(length);
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>
